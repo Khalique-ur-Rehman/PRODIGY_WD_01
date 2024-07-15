@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.js">
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+       
+.skills-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill h2 {
+    margin-bottom: 0.5rem;
+    color: #4CAF50;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    text-align: right;
+    border-radius: 4px 0 0 4px;
+}
+.contact-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 400px;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.contact-info p, .contact-info ul {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info strong {
+    display: inline-block;
+    width: 80px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-container div {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    max-width: 300px;
+}
+
+.footer-left p {
+    margin: 1rem 0;
+}
+
+.social-icons {
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4CAF50;
+}
+
+.footer-middle ul {
+    list-style: none;
+}
+
+.footer-middle ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-middle ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-middle ul li a:hover {
+    color: #4CAF50;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.footer-right button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-right button:hover {
+    background-color: #45a049;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+    <title>Responsive Landing Page </title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="1711796183878.jfif" alt="" />
+          </div>
+          <nav>
+            <div class="btn">
+              <i class="fa fa-times close-btn"></i>
+            </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </nav>
+          <div class="btn">
+            <i class="fa fa-bars menu-btn"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <video autoplay muted loop>
+        <source src="Task 02.mp4" type="video/mp4" />
+      </video>
+<div class="container">
+        <div class="content">
+          <h2>Khalique</h2>
+          <h2>Ur</h2>
+          <h2>Rehman</h2>
+          <p>
+           A passionate Web Developer with a keen eye for design and a dedication to creating seamless user experiences.
+          </p>
+          <button>Contact Me</button>
+          <div class="social_icons">
+            <i class="fa fa-brands fa-facebook"></i>
+            <i class="fa fa-brands fa-twitter"></i>
+            <i class="fa fa-brands fa-instagram"></i>
+            <i class="fa fa-brands fa-pinterest"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+        <center>
+            <h1>My Skills</h1>
+        </center>
+    <section class="skills-container">
+        <div class="skill">
+            <h2>HTML</h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h2>CSS</h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h2>JavaScript</h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h2>.Net</h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h2>Node.js</h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 65%;">65%</div>
+            </div>
+        </div>
+    </section>
+</main>
+<center>
+    <h1>Contact Me</h1>
+</center>
+<main>
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to me through the contact form or directly via email or phone. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <ul>
+                <li><strong>Email:</strong> Rehman@gmail.com</li>
+                <li><strong>Phone:</strong> +92 31647100</li>
+                <li><strong>Address:</strong>North Nazimabad</li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>About Me</h3>
+            <p>Hello! I'm Khalique ur Rehman, a passionate web developer with a knack for creating dynamic and user-friendly websites.!</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Me</h3>
+            <form id="contact-form">
+                <input type="email" id="footer-email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Khalique Ur Rehman All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+  </html>
